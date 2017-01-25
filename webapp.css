@@ -1,3 +1,9 @@
 @charset "UTF-8";
 /* CSS Document */
 
+body {
+	background-image: url(images/minecraft.png);
+	background-size: 100%;
+}
+
+  
