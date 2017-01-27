@@ -6,4 +6,15 @@ body {
 	background-size: 100%;
 }
 
+body{
+	font-size:24px;
+	border-style: groove;
+	border-radius:30px;
+    border-width: 8px;
+    border-color: Gold;
+    padding-left: 4px;
+    padding-right: 4px;
+	height: 350px;
+	float: left;
+}
   
