@@ -2,11 +2,6 @@
 /* CSS Document */
 
 body {
-	background-image: url(images/minecraft.png);
-	background-size: 100%;
-}
-
-body {
     font-size:24px;
 	border-style: groove;
 	border-radius:30px;
@@ -18,4 +13,6 @@ body {
 	float: left;
 	
 }
+
+
   
