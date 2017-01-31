@@ -2,6 +2,12 @@
 /* CSS Document */
 
 body {
+	background-image: url(images/minecraft.png);
+	background-size: 100%;
+}
+
+#potato {
+	background-color: rgb(218,165,32);
     font-size:24px;
 	border-style: groove;
 	border-radius:30px;
