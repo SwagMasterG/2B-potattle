@@ -29,10 +29,9 @@ body {
     border-color: Silver;
     padding-left: 4px;
     padding-right: 4px;
-	height: 350px;
-	float: right;
-
-}
+	height: 400px;
+	float: left;
+	}
 
 #potattle {
   	background-color: rgb(218, 165,32);
@@ -41,8 +40,10 @@ body {
 	border-radius:30px;
     border-width: 8px;
     border-color: Gold;
-    padding-left: 4px;
+    padding-left: 8px;
     padding-right: 4px;
 	height: 110px;
-	float: top;
+	text-align: center;
+	width: 350px;
+	float: left;
 }
