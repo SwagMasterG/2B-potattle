@@ -1,22 +1,25 @@
 // JavaScript Document
-var cookie=0;
-var farmers = 0;
+var potato=0;
+var farmer=0;
 
-function cookie_clicker(){
-	cookie++;
-	document.getElementById("output").innerHTML=cookie;
+function potato_clicker(){
+	potato++;
+	document.getElementById("output").innerHTML=potato;
 }
 
 
 function shop(sel) {
 	switch(sel) {
 		case "farmer":
-			if(cookie >= 50 ) {
-				cookie-=50;
-				farmers++;
+			if(potato >= 50 ) {
+				potato-=50;
+				farmer++;
 			}
+			break;
 		case "farm":
+			break;
 		case "factory":
+			break;
 	}
 }
 
