@@ -29,8 +29,8 @@ body {
     border-color: Silver;
     padding-left: 4px;
     padding-right: 4px;
-	height: 400px;
-	float: left;
+	height: 350px;
+	float: right;
 	}
 
 #potattle {
@@ -44,6 +44,6 @@ body {
     padding-right: 4px;
 	height: 110px;
 	text-align: center;
-	width: 350px;
+	width:519px;
 	float: left;
 }
