@@ -29,21 +29,22 @@ body {
     border-color: Silver;
     padding-left: 4px;
     padding-right: 4px;
-	height: 400px;
-	float: left;
+	height: 350px;
+	float: right;
 	}
 
 #potattle {
   	background-color: rgb(218, 165,32);
-    font-size:24px;
+    font-size:100px;
 	border-style: groove;
 	border-radius:30px;
     border-width: 8px;
     border-color: Gold;
     padding-left: 8px;
     padding-right: 4px;
-	height: 110px;
+	height: 350px;
 	text-align: center;
-	width: 350px;
+	width:944px;
 	float: left;
+	line-height: 0px;
 }
