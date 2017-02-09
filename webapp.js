@@ -62,3 +62,4 @@ function shop(sel) {
 }
 
 // setInterval
+var farmer= setInterval(Function() potato++ 1000)
