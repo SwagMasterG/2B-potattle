@@ -15,8 +15,11 @@ function potato_clicker(){
 
 function update_display() {
 	document.getElementById("output").innerHTML=potato;
-	// change how many farmers there are
-	// change how many 
+	document.getElementById("farmer").innerHTML = farmer;
+	document.getElementById("farm").innerHTML =farmer;
+	document.getElementById("factory").innerHTML = factory;
+	document.getElementById("McDonalds").innerHTML = McDonalds;
+	document.getElementById("spaceship").innerHTML = spaceship;
 }
 
 
