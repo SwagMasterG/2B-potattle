@@ -40,7 +40,7 @@ function shop(sel) {
 		case "factory":
 			if(potato >= 1500 ) {
 				potato-=1500;
-				farmer++;
+				factory++;
 			}
 			break;
 			case "McDonalds":
