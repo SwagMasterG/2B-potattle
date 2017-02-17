@@ -1,3 +1,64 @@
 @charset "UTF-8";
 /* CSS Document */
 
+body {
+	background-image: url(images/potatoes.jpg);
+	background-size: 100%;
+}
+
+#potato {
+	background-color: rgb(218, 165, 32);
+    font-size:24px;
+	border-style: groove;
+	border-radius:30px;
+    border-width: 8px;
+    border-color: Silver;
+    padding-left: 4px;
+    padding-right: 4px;
+	height: 357px;
+	float: left;
+	
+}
+
+#market {
+	background-color: rgb(218, 165,32);
+    font-size:24px;
+	border-style: groove;
+	border-radius:30px;
+    border-width: 8px;
+    border-color: Silver;
+    padding-left: 4px;
+    padding-right: 4px;
+	height: 357px;
+	float: right;
+	}
+
+#potattle {
+  	background-color: rgb(218, 165,32);
+    font-size:100px;
+	border-style: groove;
+	border-radius:30px;
+    border-width: 8px;
+    border-color: Gold;
+    padding-left: 8px;
+    padding-right: 4px;
+	height: 357px;
+	text-align: center;
+	width:944px;
+	float: left;
+	line-height: 0px;
+}
+
+#stats {
+	background-color: rgb(218, 165,32);
+    font-size:24px;
+	border-style: groove;
+	border-radius:30px;
+    border-width: 8px;
+    border-color: Silver;
+    padding-left: 4px;
+    padding-right: 4px;
+	width: 200px;
+	float: left;
+	height: 600px;
+}
