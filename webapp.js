@@ -11,6 +11,7 @@ var spaceship=0;
 function potato_clicker(){
 	potato++;
 	update_display();
+	disable_buttons();
 }
 
 function update_display() {
@@ -29,8 +30,9 @@ function shop(sel) {
 			if(potato >= 50 ) {
 				potato-=50;
 				farmer++;
+				
 			}
-			break;
+			break;			
 		case "farm":
 			if(potato >= 300 ) {
 				potato-=300;
@@ -58,6 +60,41 @@ function shop(sel) {
 				
 	}
 	update_display();
+	disable_buttons();
+}
+
+// check whether user can afford buttons and disable/enable accordingly
+function disable_buttons() {
+	if( potato >= 50 ) {
+		document.getElementById("farmerButton").disabled = false;
+	}
+	else {
+		document.getElementById("farmerButton").disabled=true;
+	}
+	if(potato >= 300 ) {
+		document.getElementById("farmButton").disabled = false;
+	}
+	else {
+		document.getElementById("farmButton").disabled = true;
+	}
+	if( potato >= 1500 ) {
+		document.getElementById("factoryButton").disabled = false;
+	}
+	else {
+		document.getElementById("factoryButton").disabled = true;
+	}
+	if( potato >= 5000 ){
+		document.getElementById("mcdonaldsButton").disabled = false;
+	}
+	else {
+		document.getElementById("mcdonaldsButton").disabled = true;
+	}
+	if( potato >= 10000 ){
+		document.getElementById("spaceshipButton").disabled = false;
+	}
+	else {
+		document.getElementById("spaceshipButton").disabled = true;
+	}
 }
 
 // setInterval
@@ -76,5 +113,5 @@ function bonusCalc() {
 
 	potato += bonus;
 	update_display();
-
+	disable_buttons();
 }
