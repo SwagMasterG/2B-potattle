@@ -118,9 +118,22 @@ function bonusCalc() {
 }
 // cookies
 function save_cookies() {
-	
+	var d = new Date();
+	d.setTime(d.getTime() + (120*24*60*60*1000));
+	var expires = "expires="+ d.toUTCString();
+
+	// key=value
+	document.cookie = "potato=" + potato + ";" + expires;
+	document.cookie = "farmer=" + farmer + ";" + expires;
+	document.cookie = "farm=" + farm + ";" + expires;
+	document.cookie = "factory=" + factory + ";" + expires;
+	document.cookie = "McDonalds=" + McDonalds + ";" + expires;
+	document.cookie = "spaceship=" + spaceship + ";" + expires;
+
+
+
 }
 
 function load_cookies() {
-	alert(document.cookies);
+	alert(document.cookie);
 }
