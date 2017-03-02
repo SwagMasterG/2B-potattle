@@ -12,6 +12,7 @@ function potato_clicker(){
 	potato++;
 	update_display();
 	disable_buttons();
+	
 }
 
 function update_display() {
@@ -114,4 +115,12 @@ function bonusCalc() {
 	potato += bonus;
 	update_display();
 	disable_buttons();
+}
+// cookies
+function save_cookies() {
+	
+}
+
+function load_cookies() {
+	alert(document.cookies);
 }
