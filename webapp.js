@@ -12,7 +12,7 @@ function potato_clicker(){
 	potato++;
 	update_display();
 	disable_buttons();
-	
+	save_cookies();
 }
 
 function update_display() {
@@ -115,6 +115,7 @@ function bonusCalc() {
 	potato += bonus;
 	update_display();
 	disable_buttons();
+	save_cookies();
 }
 // cookies
 function save_cookies() {
@@ -134,6 +135,48 @@ function save_cookies() {
 
 }
 
+
+window.onload = load_cookies;
+
 function load_cookies() {
-	alert(document.cookie);
+	var str = document.cookie;
+	// -> "name=Joe; score=102;"
+	// split() it into an array:
+	var cookieArray = str.split("; ")
+	// -> ["name=Joe", "score=102"]
+	// Loop through each item in the array:
+	for( var i = 0; cookieArray.length; i++ ) {
+		// split each item into a temporary array:
+		var pairArray = cookieArray[i].split("=");
+		// -> ["potato", "8"]
+		
+		// Extract the key-value pair
+		var key = pairArray[0];
+		// -> "name"
+		var value = pairArray[1];
+		// -> "Joe"
+		
+		// Check which key you have using an if or switch
+		switch(key) {
+			case "potato":
+				potato = Number(value);
+				break;
+			case "farmer":
+				farmer = Number(value);
+				break;
+			case "farm":
+				farmer = Number(value);
+				break;
+			case "factory":
+				factory = Number(value);
+				break;
+			case "McDonalds":
+				McDonalds = Number(value);
+				break;
+			case "spaceship":
+				spaceship = Number(value);
+				break;
+
+		}
+	}	
 }
