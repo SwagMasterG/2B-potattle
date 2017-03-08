@@ -58,7 +58,7 @@ function shop(sel) {
 					spaceship++;
 				}
 				break;
-				
+								
 	}
 	update_display();
 	disable_buttons();
@@ -95,6 +95,12 @@ function disable_buttons() {
 	}
 	else {
 		document.getElementById("spaceshipButton").disabled = true;
+	}
+	if( potato > 0 ){
+		document.getElementById("resetButton").disabled = false;
+	}
+	else {
+		document.getElementById("resetButton").disabled = true;
 	}
 }
 
@@ -134,6 +140,7 @@ function save_cookies() {
 
 
 }
+
 
 
 window.onload = load_cookies;
@@ -178,5 +185,20 @@ function load_cookies() {
 				break;
 
 		}
+		
 	}	
+}
+
+function resetGame() {
+	var c = confirm("Are you sure you want to restart? Doing so will lose all your progress.");
+	if(c) {
+		potato=0;
+		farmer=0;
+		farm=0;
+		factory=0;
+		McDonalds=0;
+		spaceship=0;
+		update_display();
+		save_cookies();
+	}
 }
