@@ -84,7 +84,7 @@ body {
 }
 
 @media screen and (max-width: 700px)  {
-		#potato, #stats {
+		#potato, #stats, #market {
 			width: auto;
 			float: none;
 	}
@@ -121,7 +121,7 @@ and (max-device-width: 568px)  {
 				width: auto;
 				clear: both;
 		}
-		#potattle, #stats, #market  {
+		#potattle, #stats, #market {
 				border-radius: 16px;
 				border-width: 8px;
 		}
