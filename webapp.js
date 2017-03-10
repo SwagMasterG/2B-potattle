@@ -71,7 +71,7 @@ function shop(sel) {
 				case "generator":
 				if (potato >= 100000 ) {
 					potato-=100000;
-					spaceship++;
+					generator++;
 				}
 				break;
 								
