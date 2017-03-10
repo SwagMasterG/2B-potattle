@@ -21,7 +21,7 @@ body {
     padding-right: 4px;
 	height: 357px;
 	float: left;
-	
+	width: 444
 }
 
 #market {
@@ -69,37 +69,37 @@ body {
 
 @media screen and (max-width:  980px)  {
 		#potato  {
-			width: 25%;
+			width: auto;
 		}
 		#potattle {
-			width: 50%;
+			width: auto;
 		}
 		#market  {
-			width: 25%;
+			width: auto;
 		}
-		#potattle {
-			font-size: 12px;
+		#stats {
+			width: auto;
 		}
 		
 }
 
 @media screen and (max-width: 700px)  {
-		#content, #sidebar {
+		#potato, #stats {
 			width: auto;
 			float: none;
 	}
-	#header {
+	#potattle {
 			height: auto;
 }
 }
 @media screen and (max-width: 480px)  {
-	#header {
+	#potattle {
 			height: auto;
 	}
 	h1 {
 			font-size: 24px;
 	}
-	#sidebar {
+	#stats {
 		float: none;
 	}
 }
@@ -111,17 +111,17 @@ and (max-device-width: 568px)  {
 		body  {
 				font-size: 40px;
 		}
-		#header  {
+		#potattle  {
 				height: auto;
 		}
-		#content  {
+		#market  {
 				width: auto;
 		}
-		#sidebar  {
+		#stats {
 				width: auto;
 				clear: both;
 		}
-		#header, #sidebar, #content, #footer  {
+		#potattle, #stats, #market  {
 				border-radius: 16px;
 				border-width: 8px;
 		}
