@@ -2,11 +2,13 @@
 // Score
 var potato=0;
 // Purchases
+var chip=0;
 var farmer=0;
 var farm=0;
 var factory=0;
 var McDonalds=0;
 var spaceship=0;
+var generator=0;
 
 function potato_clicker(){
 	potato++;
@@ -17,26 +19,34 @@ function potato_clicker(){
 
 function update_display() {
 	document.getElementById("output").innerHTML=potato;
+	document.getElementById("chip").innerHTML=chip;
 	document.getElementById("farmer").innerHTML = farmer;
 	document.getElementById("farm").innerHTML =farm;
 	document.getElementById("factory").innerHTML = factory;
 	document.getElementById("McDonalds").innerHTML = McDonalds;
 	document.getElementById("spaceship").innerHTML = spaceship;
+	document.getElementById("generator").innerHTML=generator;
 }
 
 
 function shop(sel) {
 	switch(sel) {
-		case "farmer":
-			if(potato >= 50 ) {
+		case "chip":
+			if(potato >= 50) {
 				potato-=50;
+				chip++;
+			}
+			break;
+		case "farmer":
+			if(potato >= 200 ) {
+				potato-=200;
 				farmer++;
 				
 			}
 			break;			
 		case "farm":
-			if(potato >= 300 ) {
-				potato-=300;
+			if(potato >= 500 ) {
+				potato-=500;
 				farm++;
 			}
 			break;
@@ -58,6 +68,12 @@ function shop(sel) {
 					spaceship++;
 				}
 				break;
+				case "generator":
+				if (potato >= 100000 ) {
+					potato-=100000;
+					spaceship++;
+				}
+				break;
 								
 	}
 	update_display();
@@ -66,13 +82,19 @@ function shop(sel) {
 
 // check whether user can afford buttons and disable/enable accordingly
 function disable_buttons() {
-	if( potato >= 50 ) {
+	if( potato >= 50) {
+		document.getElementById("chipButton").disabled = false;
+	}
+	else {
+		document.getElementById("chipButton").disabled = true;
+	}
+	if( potato >= 200 ) {
 		document.getElementById("farmerButton").disabled = false;
 	}
 	else {
 		document.getElementById("farmerButton").disabled=true;
 	}
-	if(potato >= 300 ) {
+	if(potato >= 500 ) {
 		document.getElementById("farmButton").disabled = false;
 	}
 	else {
@@ -96,6 +118,12 @@ function disable_buttons() {
 	else {
 		document.getElementById("spaceshipButton").disabled = true;
 	}
+	if( potato >= 100000 ){
+		document.getElementById("generatorButton").disabled = false;
+	}
+	else {
+		document.getElementById("generatorButton").disabled = true;
+	}
 	if( potato > 0 ){
 		document.getElementById("resetButton").disabled = false;
 	}
@@ -112,11 +140,13 @@ setInterval(function() {
 function bonusCalc() {
 	// calculate bonus
 	var bonus = 0;
-	bonus += farmer * 1;
+	bonus += chip * 1;
+	bonus += farmer * 2;
 	bonus += farm * 3;
 	bonus += factory * 5;
-	bonus += McDonalds * 8;
-	bonus += spaceship * 15;
+	bonus += McDonalds * 7;
+	bonus += spaceship * 10;
+	bonus += generator * 13;
 
 	potato += bonus;
 	update_display();
@@ -130,12 +160,14 @@ function save_cookies() {
 	var expires = "expires="+ d.toUTCString();
 
 	// key=value
+	document.cookie = "chip=" + chip + ";" + expires;
 	document.cookie = "potato=" + potato + ";" + expires;
 	document.cookie = "farmer=" + farmer + ";" + expires;
 	document.cookie = "farm=" + farm + ";" + expires;
 	document.cookie = "factory=" + factory + ";" + expires;
 	document.cookie = "McDonalds=" + McDonalds + ";" + expires;
 	document.cookie = "spaceship=" + spaceship + ";" + expires;
+	document.cookie = "generator=" + generator + ";" + expires;
 
 
 
@@ -165,8 +197,12 @@ function load_cookies() {
 		
 		// Check which key you have using an if or switch
 		switch(key) {
+			
 			case "potato":
 				potato = Number(value);
+				break;
+			case "chip":
+				chip = Number(value);
 				break;
 			case "farmer":
 				farmer = Number(value);
@@ -183,6 +219,9 @@ function load_cookies() {
 			case "spaceship":
 				spaceship = Number(value);
 				break;
+			case "generator":
+				generator = Number(value);
+				break;
 
 		}
 		
@@ -193,11 +232,13 @@ function resetGame() {
 	var c = confirm("Are you sure you want to restart? Doing so will lose all your progress.");
 	if(c) {
 		potato=0;
+		chip=0;
 		farmer=0;
 		farm=0;
 		factory=0;
 		McDonalds=0;
 		spaceship=0;
+		generator=0;
 		update_display();
 		save_cookies();
 	}
