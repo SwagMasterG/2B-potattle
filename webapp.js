@@ -83,7 +83,7 @@ function shop(sel) {
 // check whether user can afford buttons and disable/enable accordingly
 function disable_buttons() {
 	if( potato >= 50) {
-		document.getElementById("chipbutton").disabled = false;
+		document.getElementById("chipButton").disabled = false;
 	}
 	else {
 		document.getElementById("chipButton").disabled = true;
@@ -119,7 +119,7 @@ function disable_buttons() {
 		document.getElementById("spaceshipButton").disabled = true;
 	}
 	if( potato >= 100000 ){
-		document.getElementById("generatorButton").disabled =false;
+		document.getElementById("generatorButton").disabled = false;
 	}
 	else {
 		document.getElementById("generatorButton").disabled = true;
