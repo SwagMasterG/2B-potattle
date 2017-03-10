@@ -14,9 +14,8 @@
 <body>
 <!--Add your HTML here-->
 
-
 <div id="potato">
-                                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                     
                   <a href="JavaScript:potato_clicker()"><img src="images/potato.png" alt="potato"></a>
 <h2>Potatoes:</h2><p id="output"></p>                                                                                                                                                  
 																																									
@@ -24,14 +23,18 @@
 
 <div id="potattle">
 <h1>Potattle</h1>
+<input id="resetButton" type="button" value="Reset game" onClick="resetGame()">    
 </div>
 
 <div id="market">
        <h1>Market</h1>
-	   <input id="farmerButton" type="button" value="Farmer (50)" onClick="shop ('farmer');">
+	     <input id="chipButton" type="button" value="Potato Chips (50)" onClick="shop ('chip');">
+	   "Buy a bag of Lays™ chips to satisfy your tummy."
+	   <br>
+	   <input id="farmerButton" type="button" value="Farmer (200)" onClick="shop ('farmer');">
 	   "Hire a farmer to work for you."
 	   <br>
-	   <input id="farmButton" type="button" value="Farm (300)" onClick="shop ('farm');">
+	   <input id="farmButton" type="button" value="Farm (500)" onClick="shop ('farm');">
 	   "Get a potato farm to boost your production."
 	   <br>
 	    <input id="factoryButton" type="button" value="Factory (1500)" onClick="shop ('factory');">
@@ -42,9 +45,15 @@
 	   <br>
 	   <input id="spaceshipButton" type="button" value="Spaceship (10000)" onClick="shop ('spaceship');">
 	   "Get a spaceship to fly into Potato Land."
+	   <br>
+	     <input id="generatorButton" type="button" value="Potato Generator (100000)" onClick="shop ('generator');">
+	   "A machine that generates infinite potatoes.
+	   <br>
 </div>
 
 <div id="stats">
+<h3>Potato Chips:</h3>
+<p id="chip"></p>
 <h3>Farmers:</h3>
 <p id="farmer"></p>
 <h3>Farms:</h3>
@@ -55,6 +64,10 @@
 <p id="McDonalds"></p>
 <h3>Spaceships:</h3>
 <p id="spaceship"></p>
+<h3>Potato Generator:</h3>
+<p id="generator"></p>
+<h3>PPS:</h3>
+<p id="pps"></p>
 </div>
 </body>
 </html>
