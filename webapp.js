@@ -28,7 +28,7 @@ function update_display() {
 	document.getElementById("generator").innerHTML=generator;
 }
 
-
+// Shop
 function shop(sel) {
 	switch(sel) {
 		case "chip":
@@ -227,7 +227,7 @@ function load_cookies() {
 		
 	}	
 }
-
+// Restart Game
 function resetGame() {
 	var c = confirm("Are you sure you want to restart? Doing so will lose all your progress.");
 	if(c) {
