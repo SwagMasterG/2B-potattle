@@ -73,6 +73,7 @@ body {
 		}
 		#potattle {
 			width: auto;
+			font-size: 60px;
 		}
 		#market  {
 			width: auto;
@@ -90,6 +91,7 @@ body {
 	}
 	#potattle {
 			height: auto;
+			font-size: 36px;
 }
 }
 @media screen and (max-width: 480px)  {
