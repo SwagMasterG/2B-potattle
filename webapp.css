@@ -21,7 +21,7 @@ body {
     padding-right: 4px;
 	height: 357px;
 	float: left;
-	width: 444
+	width: 444;
 }
 
 #market {
@@ -73,6 +73,7 @@ body {
 		}
 		#potattle {
 			width: auto;
+			font-size: 60px;
 		}
 		#market  {
 			width: auto;
@@ -90,6 +91,7 @@ body {
 	}
 	#potattle {
 			height: auto;
+			font-size: 36px;
 }
 }
 @media screen and (max-width: 480px)  {
