@@ -12,9 +12,11 @@ Insert answer here.
 Insert answer here.
 
 ## Changelog
-
+-->
 ### Version 1.1
+This is our second release. We really hope you enjoy playing Potattle. We are working on 1.2. Thank you.
 
+<!--
 #### Bug fixes
  * Fixed thing
  * Fixed other thing
