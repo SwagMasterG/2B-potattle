@@ -9,6 +9,7 @@ var factory=0;
 var McDonalds=0;
 var spaceship=0;
 var generator=0;
+var PPs=0;
 
 function potato_clicker(){
 	potato++;
@@ -19,6 +20,7 @@ function potato_clicker(){
 
 function update_display() {
 	document.getElementById("output").innerHTML=potato;
+	document.getElementById("pps").innerHTML=PPs;
 	document.getElementById("chip").innerHTML=chip;
 	document.getElementById("farmer").innerHTML = farmer;
 	document.getElementById("farm").innerHTML =farm;
@@ -35,43 +37,49 @@ function shop(sel) {
 			if(potato >= 50) {
 				potato-=50;
 				chip++;
+				PPs+=1;
 			}
 			break;
 		case "farmer":
 			if(potato >= 200 ) {
 				potato-=200;
 				farmer++;
-				
+				PPs+=2;
 			}
 			break;			
 		case "farm":
 			if(potato >= 500 ) {
 				potato-=500;
 				farm++;
+				PPs+=3;
 			}
 			break;
 		case "factory":
 			if(potato >= 1500 ) {
 				potato-=1500;
 				factory++;
+				PPs+=5;
 			}
 			break;
 			case "McDonalds":
 				if(potato >= 5000 ) {
 					potato-=5000;
 					McDonalds++;
+					PPs+=7;
 				}
 				break;
 				case "spaceship":
 				if(potato >= 10000 ) {
 					potato-=10000;
 					spaceship++;
+					PPs+=13;
 				}
 				break;
 				case "generator":
 				if (potato >= 100000 ) {
 					potato-=100000;
 					generator++;
+					PPs+=15;
 				}
 				break;
 								
