@@ -3,7 +3,7 @@
 
 body {
 	background-image: url(images/potatoes.jpg);
-	background-size: 2000px;
+	background-size: 2150px;
 }
 
 #potato img {
@@ -64,7 +64,7 @@ body {
     padding-right: 4px;
 	width: 200px;
 	float: left;
-	height: 850px;
+	height: 1000px;
 }
 
 @media screen and (max-width:  980px)  {
