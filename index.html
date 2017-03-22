@@ -16,9 +16,8 @@
 
 <div id="potato">
                                                                                                                                                                                                                                                                                                                                                                                      
-                  <img src="images/potato.png" alt="potato" onClick="potato_clicker()">
-<h2>Potatoes:</h2><p id="output"></p>                                                                                                                                           
-																																									
+                  <img onClick="potato_clicker()" src="images/potato.png" alt="potato">
+<h2>Potatoes:</h2><p id="output"></p>                                                                                                                                                  																																									
             </div>
 
 <div id="potattle">
@@ -47,7 +46,10 @@
 	   "Get a spaceship to fly into Potato Land."
 	   <br>
 	     <input id="generatorButton" type="button" value="Potato Generator (100000)" onClick="shop ('generator');">
-	   "A machine that generates infinite potatoes.
+	   "A machine that generates infinite potatoes."
+	   <br>
+	   <input id="increaseButton" type="button" value="Upgrade PPC (15000)" onClick="upgrade ('increase');">
+	   "Upgrade your Potato Per Click by 1."
 	   <br>
 </div>
 
@@ -69,5 +71,6 @@
 <h3>Potato Generator:</h3>
 <p id="generator"></p>
 </div>
+
 </body>
 </html>

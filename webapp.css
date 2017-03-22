@@ -26,7 +26,7 @@ body {
 
 #market {
 	background-color: rgb(218, 165,32);
-    font-size:24px;
+    font-size:20px;
 	border-style: groove;
 	border-radius:30px;
     border-width: 8px;
@@ -48,7 +48,7 @@ body {
     padding-right: 4px;
 	height: 357px;
 	text-align: center;
-	width:944px;
+	width:929px;
 	float: left;
 	line-height: 0px;
 }
@@ -69,38 +69,62 @@ body {
 
 @media screen and (max-width:  980px)  {
 		#potato  {
-			width: auto;
+			clear: both;
+    		width: auto;
+    		float: none;
+    		height: auto;
 		}
 		#potattle {
-			width: auto;
+			clear: both;
+    		width: auto;
+   		    float: none;
+    		height: auto;
 		}
 		#market  {
-			width: auto;
+			clear: both;
+    		width: auto;
+   		    float: none;
+    		height: auto;
 		}
 		#stats {
-			width: auto;
+			clear: both;
+    		width: auto;
+   		    float: none;
+    		height: auto;
 		}
 		
 }
 
 @media screen and (max-width: 700px)  {
 		#potato, #stats, #market {
-			width: auto;
-			float: none;
+			clear: both;
+    		width: auto;
+   		    float: none;
+    		height: auto;
 	}
 	#potattle {
-			height: auto;
+			clear: both;
+    		width: auto;
+   		    float: none;
+    		height: auto;
+			font-size: 36px;
 }
 }
 @media screen and (max-width: 480px)  {
 	#potattle {
-			height: auto;
+			clear: both;
+    		width: auto;
+   		    float: none;
+    		height: auto;
 	}
 	h1 {
 			font-size: 24px;
 	}
 	#stats {
-		float: none;
+		clear: both;
+    		width: auto;
+   		    float: none;
+    		height: auto;
 	}
 }
 
@@ -112,14 +136,22 @@ and (max-device-width: 568px)  {
 				font-size: 40px;
 		}
 		#potattle  {
-				height: auto;
+			clear: both;
+    		width: auto;
+   		    float: none;
+    		height: auto;
 		}
 		#market  {
-				width: auto;
+			clear: both;
+    		width: auto;
+   		    float: none;
+    		height: auto;
 		}
 		#stats {
-				width: auto;
-				clear: both;
+			clear: both;
+    		width: auto;
+   		    float: none;
+    		height: auto;
 		}
 		#potattle, #stats, #market {
 				border-radius: 16px;
