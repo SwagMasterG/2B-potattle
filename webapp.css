@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /* CSS Document */
-
+/*designs and colors for all boxes */
 body {
 	background-image: url(images/potatoes.jpg);
-	background-size: 2000px;
+	background-size: 2150px;
 }
 
 #potato img {
@@ -48,7 +48,7 @@ body {
     padding-right: 4px;
 	height: 357px;
 	text-align: center;
-	width:944px;
+	width:929px;
 	float: left;
 	line-height: 0px;
 }
@@ -64,45 +64,67 @@ body {
     padding-right: 4px;
 	width: 200px;
 	float: left;
-	height: 850px;
+	height: 1000px;
 }
-
+/*screen adaptation*/
 @media screen and (max-width:  980px)  {
 		#potato  {
-			width: auto;
+			clear: both;
+    		width: auto;
+    		float: none;
+    		height: auto;
 		}
 		#potattle {
-			width: auto;
-			font-size: 60px;
+			clear: both;
+    		width: auto;
+   		    float: none;
+    		height: auto;
 		}
 		#market  {
-			width: auto;
+			clear: both;
+    		width: auto;
+   		    float: none;
+    		height: auto;
 		}
 		#stats {
-			width: auto;
+			clear: both;
+    		width: auto;
+   		    float: none;
+    		height: auto;
 		}
 		
 }
 
 @media screen and (max-width: 700px)  {
 		#potato, #stats, #market {
-			width: auto;
-			float: none;
+			clear: both;
+    		width: auto;
+   		    float: none;
+    		height: auto;
 	}
 	#potattle {
-			height: auto;
+			clear: both;
+    		width: auto;
+   		    float: none;
+    		height: auto;
 			font-size: 36px;
 }
 }
 @media screen and (max-width: 480px)  {
 	#potattle {
-			height: auto;
+			clear: both;
+    		width: auto;
+   		    float: none;
+    		height: auto;
 	}
 	h1 {
 			font-size: 24px;
 	}
 	#stats {
-		float: none;
+		clear: both;
+    		width: auto;
+   		    float: none;
+    		height: auto;
 	}
 }
 
@@ -114,14 +136,23 @@ and (max-device-width: 568px)  {
 				font-size: 40px;
 		}
 		#potattle  {
+				clear: both;
+				width: auto;
 				height: auto;
+				float: none;
 		}
 		#market  {
+				clear: both;
 				width: auto;
+				height: auto;
+				float: none;
 		}
 		#stats {
-				width: auto;
 				clear: both;
+				width: auto;
+				height: auto;
+				float: none;
+
 		}
 		#potattle, #stats, #market {
 				border-radius: 16px;
