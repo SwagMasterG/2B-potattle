@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
-
+/*designs and colors for all boxes */
 body {
 	background-image: url(images/potatoes.jpg);
 	background-size: 2150px;
@@ -66,7 +66,7 @@ body {
 	float: left;
 	height: 1000px;
 }
-
+/*screen adaptation*/
 @media screen and (max-width:  980px)  {
 		#potato  {
 			clear: both;
@@ -136,22 +136,23 @@ and (max-device-width: 568px)  {
 				font-size: 40px;
 		}
 		#potattle  {
-			clear: both;
-    		width: auto;
-   		    float: none;
-    		height: auto;
+				clear: both;
+				width: auto;
+				height: auto;
+				float: none;
 		}
 		#market  {
-			clear: both;
-    		width: auto;
-   		    float: none;
-    		height: auto;
+				clear: both;
+				width: auto;
+				height: auto;
+				float: none;
 		}
 		#stats {
-			clear: both;
-    		width: auto;
-   		    float: none;
-    		height: auto;
+				clear: both;
+				width: auto;
+				height: auto;
+				float: none;
+
 		}
 		#potattle, #stats, #market {
 				border-radius: 16px;

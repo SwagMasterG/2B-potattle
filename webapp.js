@@ -126,6 +126,12 @@ function disable_buttons() {
 	else {
 		document.getElementById("spaceshipButton").disabled = true;
 	}
+	if( potato >= 15000 ){
+		document.getElementById("increaseButton").disabled = false;
+	}
+	else {
+		document.getElementById("increaseButton").disabled = true;
+	}
 	if( potato >= 100000 ){
 		document.getElementById("generatorButton").disabled = false;
 	}
