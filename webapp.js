@@ -9,13 +9,15 @@ var factory=0;
 var McDonalds=0;
 var spaceship=0;
 var generator=0;
-var PPs=0;
+var achieveArray=[];
+
 
 function potato_clicker(){
 	potato++;
 	update_display();
 	disable_buttons();
 	save_cookies();
+	achievements();
 }
 
 function update_display() {
@@ -87,6 +89,60 @@ function shop(sel) {
 	update_display();
 	disable_buttons();
 }
+// Achievements
+function achievements(){
+	// achievement #1
+	if(potato >= 1000000 && searchAchievements(1) == false) {
+		achieveArray.push(1);
+		alert("Congrats! You are a Potato Master.");
+		//document.getElementById("image").innerHTML="<img src=images/bronze.png>";
+	}
+	if(chip >= 10 && searchAchievements(2) == false) {
+		achieveArray.push(2);
+		alert("Congrats! You are addicted to chips.");
+		//document.getElementById("image").innerHTML="<img src=images/bronze.png>";
+	}
+	if(farmer >= 10 && searchAchievements(3) == false) {
+		achieveArray.push(3);
+		alert("Congrats! Your workers love you.");
+		//document.getElementById("image").innerHTML="<img src=images/bronze.png>";
+	}
+	if(McDonalds >= 1 && searchAchievements(4) == false) {
+		achieveArray.push(4);
+		alert("Congrats! You joined the McDonalds fastfood chain.");
+		//document.getElementById("image").innerHTML="<img src=images/bronze.png>";
+	}
+	if(spaceship >= 1 && searchAchievements(5) == false) {
+		achieveArray.push(5);
+		alert("Congrats! You are space born.");
+		//document.getElementById("image").innerHTML="<img src=images/bronze.png>";
+	}
+	if(generator >= 1 && searchAchievements(6) == false) {
+		achieveArray.push(6);
+		alert("Congrats! You are addicted to potatoes.");
+		//document.getElementById("image").innerHTML="<img src=images/bronze.png>";
+	}
+	if(potato >= 1 && searchAchievements(7) == false) {
+		achieveArray.push(7);
+		alert("Congrats! You started the game.");
+		//document.getElementById("image").innerHTML="<img src=images/bronze.png>";
+	}
+
+
+
+
+
+}
+
+function searchAchievements(number) {
+	for(var i = 0; i<achieveArray.length; i++ ) {
+		if(achieveArray[i] == number) {
+			return true;
+		}
+	}
+	return false;
+}
+
 
 // check whether user can afford buttons and disable/enable accordingly
 function disable_buttons() {
@@ -126,6 +182,12 @@ function disable_buttons() {
 	else {
 		document.getElementById("spaceshipButton").disabled = true;
 	}
+	if( potato >= 15000 ){
+		document.getElementById("increaseButton").disabled = false;
+	}
+	else {
+		document.getElementById("increaseButton").disabled = true;
+	}
 	if( potato >= 100000 ){
 		document.getElementById("generatorButton").disabled = false;
 	}
@@ -160,12 +222,14 @@ function bonusCalc() {
 	update_display();
 	disable_buttons();
 	save_cookies();
+	achievements();
 }
 // cookies
 function save_cookies() {
 	var d = new Date();
 	d.setTime(d.getTime() + (120*24*60*60*1000));
 	var expires = "expires="+ d.toUTCString();
+	var achieveStr = "";
 
 	// key=value
 	document.cookie = "chip=" + chip + ";" + expires;
@@ -176,7 +240,16 @@ function save_cookies() {
 	document.cookie = "McDonalds=" + McDonalds + ";" + expires;
 	document.cookie = "spaceship=" + spaceship + ";" + expires;
 	document.cookie = "generator=" + generator + ";" + expires;
-
+	for(var i = 0; i<achieveArray.length; i ++) {
+		if( i == (achieveArray.length-1)) {
+			achieveStr += String(achieveArray[i]);
+		}
+		else {
+			achieveStr += String(achieveArray[i]) + ":";
+		}
+	}
+	
+	document.cookie = "achievements=" + achieveStr + ";" + expires;
 
 
 }
@@ -187,7 +260,7 @@ window.onload = load_cookies;
 
 function load_cookies() {
 	var str = document.cookie;
-	// -> "name=Joe; score=102;"
+	// -> "name=Joe; score=102; achievements=1,2,3,4,5"
 	// split() it into an array:
 	var cookieArray = str.split("; ")
 	// -> ["name=Joe", "score=102"]
@@ -207,7 +280,7 @@ function load_cookies() {
 		switch(key) {
 			
 			case "potato":
-				potato = Number(value);
+				potato = Number(value); // "5"
 				break;
 			case "chip":
 				chip = Number(value);
@@ -216,7 +289,7 @@ function load_cookies() {
 				farmer = Number(value);
 				break;
 			case "farm":
-				farmer = Number(value);
+				farm = Number(value);
 				break;
 			case "factory":
 				factory = Number(value);
@@ -229,6 +302,11 @@ function load_cookies() {
 				break;
 			case "generator":
 				generator = Number(value);
+				break;
+			case "achievements":
+				// "2:5:1"
+				var tempArray = value.split(":").map(Number);
+				achieveArray = tempArray;
 				break;
 
 		}
