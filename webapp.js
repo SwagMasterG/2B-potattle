@@ -10,7 +10,7 @@ var McDonalds=0;
 var spaceship=0;
 var generator=0;
 var achieveArray=[];
-
+var i = 50;
 
 function potato_clicker(){
 	potato++;
@@ -35,8 +35,10 @@ function update_display() {
 function shop(sel) {
 	switch(sel) {
 		case "chip":
-			if(potato >= 50) {
-				potato-=50;
+			if(potato >= i) {
+				potato-=i;
+				i += 5;
+				update_display();
 				chip++;
 				
 			}
@@ -145,7 +147,7 @@ function searchAchievements(number) {
 
 // check whether user can afford buttons and disable/enable accordingly
 function disable_buttons() {
-	if( potato >= 50) {
+	if( potato >= i) {
 		document.getElementById("chipButton").disabled = false;
 	}
 	else {
